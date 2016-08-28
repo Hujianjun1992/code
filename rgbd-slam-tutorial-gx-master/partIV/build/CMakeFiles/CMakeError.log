@@ -1,0 +1,51 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/hxb/rgbd-slam-tutorial-gx-master/partIV/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_64981/fast"
+/usr/bin/make -f CMakeFiles/cmTC_64981.dir/build.make CMakeFiles/cmTC_64981.dir/build
+make[1]: 正在进入目录 `/home/hxb/rgbd-slam-tutorial-gx-master/partIV/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_64981.dir/CheckSymbolExists.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_64981.dir/CheckSymbolExists.c.o   -c /home/hxb/rgbd-slam-tutorial-gx-master/partIV/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_64981
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_64981.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_64981.dir/CheckSymbolExists.c.o  -o cmTC_64981 -rdynamic 
+CMakeFiles/cmTC_64981.dir/CheckSymbolExists.c.o：在函数‘main’中：
+CheckSymbolExists.c:(.text+0x16)：对‘pthread_create’未定义的引用
+collect2: error: ld returned 1 exit status
+make[1]: *** [cmTC_64981] 错误 1
+make[1]:正在离开目录 `/home/hxb/rgbd-slam-tutorial-gx-master/partIV/build/CMakeFiles/CMakeTmp'
+make: *** [cmTC_64981/fast] 错误 2
+
+File /home/hxb/rgbd-slam-tutorial-gx-master/partIV/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/hxb/rgbd-slam-tutorial-gx-master/partIV/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_fddf1/fast"
+/usr/bin/make -f CMakeFiles/cmTC_fddf1.dir/build.make CMakeFiles/cmTC_fddf1.dir/build
+make[1]: 正在进入目录 `/home/hxb/rgbd-slam-tutorial-gx-master/partIV/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_fddf1.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_fddf1.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_fddf1
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fddf1.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_fddf1.dir/CheckFunctionExists.c.o  -o cmTC_fddf1 -rdynamic -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [cmTC_fddf1] 错误 1
+make[1]:正在离开目录 `/home/hxb/rgbd-slam-tutorial-gx-master/partIV/build/CMakeFiles/CMakeTmp'
+make: *** [cmTC_fddf1/fast] 错误 2
+
+

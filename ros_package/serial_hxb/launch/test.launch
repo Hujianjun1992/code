@@ -1,0 +1,3 @@
+<launch>
+  <include file="$(find serial_hxb)/launch/test.launch.xml"/>
+</launch>

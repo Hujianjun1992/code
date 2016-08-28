@@ -1,0 +1,26 @@
+<launch>
+  <include file ="$(find serial_hxb)/launch/smartcar_joy.launch" /> 
+  <arg name = "model" default = "$(find my_smartcar)/urdf/smartcar.urdf"/>
+  <include file="$(find serial_hxb)/launch/test.launch" />
+  <include file="$(find my_smartcar)/launch/my_smartcar_move_base_map.launch"/>
+  <include file="$(find my_smartcar)/launch/hokuyo.launch"/>
+<!-- Run fake localization compatible with AMCL output -->
+ <node pkg="fake_localization" type="fake_localization" name="fake_localization" output="screen" />
+
+<!--  <include file="$(find my_smartcar)/launch/gmapping.launch"/>-->
+  <param name="/use_sim_time" value="false" />
+        <!-- Load the URDF/Xacro model of our robot -->
+  <arg name="gui" default="false" />
+  <param name="robot_description" command="$(find xacro)/xacro.py $(arg model)" />
+  <param name="use_gui" value="$(arg gui)"/>
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"/> 
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher">
+     <param name="publish_frequency" type="double" value="20.0" />
+  </node>
+
+  <!--  <node name = "odom_to_map" pkg = "tf" type = "static_transform_publisher" args = "0 0 0.0762 0 0 0 map odom 100"/>-->
+  <node name = "base_link_to_base_laser" pkg = "tf" type = "static_transform_publisher" args = "0.14 0 0.061 0 0 0 base_link base_laser 100"/>
+
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find my_smartcar)/rviz/my_smartcar.rviz" required = "true"/>
+</launch>
+

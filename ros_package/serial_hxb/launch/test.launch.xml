@@ -1,0 +1,12 @@
+<launch>
+
+<!--  <node pkg="turtlesim" type="turtle_teleop_key" name="teleop_key" launch-prefix = "xterm -e" >
+       <remap from="turtle1/cmd_vel" to="cmd_vel" /> </node> -->
+
+  <node name = "serial_hxb" pkg = "serial_hxb" type = "serial_uart" required = "true"  launch-prefix ="xterm -e"/>
+
+  <node name = "Test" pkg = "serial_hxb" type = "Test" respawn = "true" output = "screen"/>
+
+<!--  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find serial_hxb)/Test.rviz" required = "true"/>  -->		
+
+</launch>

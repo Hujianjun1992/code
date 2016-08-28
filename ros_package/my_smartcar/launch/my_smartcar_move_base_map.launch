@@ -1,0 +1,5 @@
+<launch>
+
+		<include file="$(find my_smartcar)/launch/my_smartcar_move_base_map.launch.xml"/>
+
+</launch>

@@ -1,0 +1,15 @@
+<launch>
+                                <!-- Run the map server with a blank map -->
+
+  <node name = "map_server" pkg = "map_server" type = "map_server" args = "$(find my_smartcar)/maps/map.yaml"/>
+  <node name = "move_base" pkg = "move_base" type = "move_base" respawn = "false" output = "screen" clear_params = "true">
+
+  <rosparam file="$(find my_smartcar)/config/costmap_common_params.yaml" command="load" ns="global_costmap" />
+  <rosparam file="$(find my_smartcar)/config/costmap_common_params.yaml" command="load" ns="local_costmap" />
+  <rosparam file="$(find my_smartcar)/config/local_costmap_params.yaml" command="load" />
+  <rosparam file="$(find my_smartcar)/config/global_costmap_params.yaml" command="load" />
+  <rosparam file="$(find my_smartcar)/config/base_local_planner_params.yaml" command="load" />
+  </node>  
+
+<!--  <node name = "hujianjun" pkg = "turtlesim" type = "turtlesim_node" />-->
+</launch>

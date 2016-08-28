@@ -1,0 +1,3 @@
+<launch>
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find my_smartcar)/my_smartcar.rviz" required = "true"/>   
+</launch>
