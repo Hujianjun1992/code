@@ -15,7 +15,8 @@ set( G2O_ROOT /usr/local/include/g2o )
 find_package( G2O )
 
 find_package( CSparse )
-include_directories( ${G2O_INCLUDE_DIR} ${CSPARSE_INCLUDE_DIR} )
+message(STATUS "This is dir" ${CSPARSE_INCLUDE_DIR})
+include_directories( ${G3O_INCLUDE_DIR} ${CSPARSE_INCLUDE_DIR} )
 
 add_executable( slamEnd slamEnd.cpp)
 target_link_libraries(slamEnd slambase ${OpenCV_LIBS} ${PCL_LIBRARIES} g2o_core g2o_types_slam3d g2o_solver_csparse

@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/hxb/rgbdslam/6/src/slamBase.cpp" "/home/hxb/rgbdslam/6/build/src/CMakeFiles/slambase.dir/slamBase.cpp.o"
+  "/home/hxb/github/code/rgbdslam/6/src/slamBase.cpp" "/home/hxb/github/code/rgbdslam/6/build/src/CMakeFiles/slambase.dir/slamBase.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

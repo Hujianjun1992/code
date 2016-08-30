@@ -1,4 +1,4 @@
-# Install script for directory: /home/hxb/rgbdslam/6/src
+# Install script for directory: /home/hxb/github/code/rgbdslam/6/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

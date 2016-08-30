@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/hxb/rgbdslam/6/src/slamEnd.cpp" "/home/hxb/rgbdslam/6/build/src/CMakeFiles/slamEnd.dir/slamEnd.cpp.o"
+  "/home/hxb/github/code/rgbdslam/6/src/slamEnd.cpp" "/home/hxb/github/code/rgbdslam/6/build/src/CMakeFiles/slamEnd.dir/slamEnd.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -29,7 +29,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/hxb/rgbdslam/6/build/src/CMakeFiles/slambase.dir/DependInfo.cmake"
+  "/home/hxb/github/code/rgbdslam/6/build/src/CMakeFiles/slambase.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.
