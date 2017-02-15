@@ -43,10 +43,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hxb/rgbd-slam-tutorial-gx-master/partVII
+CMAKE_SOURCE_DIR = /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hxb/rgbd-slam-tutorial-gx-master/partVII/build
+CMAKE_BINARY_DIR = /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/build
 
 # Include any dependencies generated for this target.
 include src/CMakeFiles/slamEnd.dir/depend.make
@@ -59,16 +59,16 @@ include src/CMakeFiles/slamEnd.dir/flags.make
 
 src/CMakeFiles/slamEnd.dir/slamEnd.cpp.o: src/CMakeFiles/slamEnd.dir/flags.make
 src/CMakeFiles/slamEnd.dir/slamEnd.cpp.o: ../src/slamEnd.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hxb/rgbd-slam-tutorial-gx-master/partVII/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/slamEnd.dir/slamEnd.cpp.o"
-	cd /home/hxb/rgbd-slam-tutorial-gx-master/partVII/build/src && g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/slamEnd.dir/slamEnd.cpp.o -c /home/hxb/rgbd-slam-tutorial-gx-master/partVII/src/slamEnd.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/slamEnd.dir/slamEnd.cpp.o"
+	cd /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/build/src && g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/slamEnd.dir/slamEnd.cpp.o -c /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/src/slamEnd.cpp
 
 src/CMakeFiles/slamEnd.dir/slamEnd.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/slamEnd.dir/slamEnd.cpp.i"
-	cd /home/hxb/rgbd-slam-tutorial-gx-master/partVII/build/src && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hxb/rgbd-slam-tutorial-gx-master/partVII/src/slamEnd.cpp > CMakeFiles/slamEnd.dir/slamEnd.cpp.i
+	cd /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/build/src && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/src/slamEnd.cpp > CMakeFiles/slamEnd.dir/slamEnd.cpp.i
 
 src/CMakeFiles/slamEnd.dir/slamEnd.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/slamEnd.dir/slamEnd.cpp.s"
-	cd /home/hxb/rgbd-slam-tutorial-gx-master/partVII/build/src && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hxb/rgbd-slam-tutorial-gx-master/partVII/src/slamEnd.cpp -o CMakeFiles/slamEnd.dir/slamEnd.cpp.s
+	cd /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/build/src && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/src/slamEnd.cpp -o CMakeFiles/slamEnd.dir/slamEnd.cpp.s
 
 src/CMakeFiles/slamEnd.dir/slamEnd.cpp.o.requires:
 
@@ -105,16 +105,17 @@ slamEnd_EXTERNAL_OBJECTS =
 ../bin/slamEnd: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
 ../bin/slamEnd: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
 ../bin/slamEnd: /usr/lib/x86_64-linux-gnu/libboost_regex.so
-../bin/slamEnd: /usr/lib/libpcl_common.so
-../bin/slamEnd: /usr/lib/libpcl_octree.so
+../bin/slamEnd: /usr/local/lib/libpcl_common.so
+../bin/slamEnd: /usr/local/lib/libpcl_octree.so
 ../bin/slamEnd: /usr/lib/libOpenNI.so
-../bin/slamEnd: /usr/lib/libpcl_io.so
+../bin/slamEnd: /usr/lib/libOpenNI2.so
+../bin/slamEnd: /usr/local/lib/libpcl_io.so
 ../bin/slamEnd: /usr/lib/x86_64-linux-gnu/libflann_cpp_s.a
-../bin/slamEnd: /usr/lib/libpcl_kdtree.so
-../bin/slamEnd: /usr/lib/libpcl_search.so
-../bin/slamEnd: /usr/lib/libpcl_visualization.so
-../bin/slamEnd: /usr/lib/libpcl_sample_consensus.so
-../bin/slamEnd: /usr/lib/libpcl_filters.so
+../bin/slamEnd: /usr/local/lib/libpcl_kdtree.so
+../bin/slamEnd: /usr/local/lib/libpcl_search.so
+../bin/slamEnd: /usr/local/lib/libpcl_visualization.so
+../bin/slamEnd: /usr/local/lib/libpcl_sample_consensus.so
+../bin/slamEnd: /usr/local/lib/libpcl_filters.so
 ../bin/slamEnd: /usr/lib/x86_64-linux-gnu/libboost_system.so
 ../bin/slamEnd: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
 ../bin/slamEnd: /usr/lib/x86_64-linux-gnu/libboost_thread.so
@@ -125,7 +126,10 @@ slamEnd_EXTERNAL_OBJECTS =
 ../bin/slamEnd: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
 ../bin/slamEnd: /usr/lib/x86_64-linux-gnu/libboost_regex.so
 ../bin/slamEnd: /usr/lib/libOpenNI.so
+../bin/slamEnd: /usr/lib/libOpenNI2.so
 ../bin/slamEnd: /usr/lib/x86_64-linux-gnu/libflann_cpp_s.a
+../bin/slamEnd: /usr/lib/libvtkGenericFiltering.so.5.8.0
+../bin/slamEnd: /usr/lib/libvtkGeovis.so.5.8.0
 ../bin/slamEnd: /usr/lib/libvtkCharts.so.5.8.0
 ../bin/slamEnd: /usr/lib/x86_64-linux-gnu/libcxsparse.so
 ../bin/slamEnd: /usr/local/lib/libopencv_nonfree.so.2.4.13
@@ -145,12 +149,12 @@ slamEnd_EXTERNAL_OBJECTS =
 ../bin/slamEnd: /usr/lib/libvtkViews.so.5.8.0
 ../bin/slamEnd: /usr/lib/libvtkInfovis.so.5.8.0
 ../bin/slamEnd: /usr/lib/libvtkWidgets.so.5.8.0
+../bin/slamEnd: /usr/lib/libvtkVolumeRendering.so.5.8.0
 ../bin/slamEnd: /usr/lib/libvtkHybrid.so.5.8.0
 ../bin/slamEnd: /usr/lib/libvtkParallel.so.5.8.0
-../bin/slamEnd: /usr/lib/libvtkVolumeRendering.so.5.8.0
 ../bin/slamEnd: /usr/lib/libvtkRendering.so.5.8.0
-../bin/slamEnd: /usr/lib/libvtkGraphics.so.5.8.0
 ../bin/slamEnd: /usr/lib/libvtkImaging.so.5.8.0
+../bin/slamEnd: /usr/lib/libvtkGraphics.so.5.8.0
 ../bin/slamEnd: /usr/lib/libvtkIO.so.5.8.0
 ../bin/slamEnd: /usr/lib/libvtkFiltering.so.5.8.0
 ../bin/slamEnd: /usr/lib/libvtkCommon.so.5.8.0
@@ -164,16 +168,17 @@ slamEnd_EXTERNAL_OBJECTS =
 ../bin/slamEnd: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
 ../bin/slamEnd: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
 ../bin/slamEnd: /usr/lib/x86_64-linux-gnu/libboost_regex.so
-../bin/slamEnd: /usr/lib/libpcl_common.so
-../bin/slamEnd: /usr/lib/libpcl_octree.so
+../bin/slamEnd: /usr/local/lib/libpcl_common.so
+../bin/slamEnd: /usr/local/lib/libpcl_octree.so
 ../bin/slamEnd: /usr/lib/libOpenNI.so
-../bin/slamEnd: /usr/lib/libpcl_io.so
+../bin/slamEnd: /usr/lib/libOpenNI2.so
+../bin/slamEnd: /usr/local/lib/libpcl_io.so
 ../bin/slamEnd: /usr/lib/x86_64-linux-gnu/libflann_cpp_s.a
-../bin/slamEnd: /usr/lib/libpcl_kdtree.so
-../bin/slamEnd: /usr/lib/libpcl_search.so
-../bin/slamEnd: /usr/lib/libpcl_visualization.so
-../bin/slamEnd: /usr/lib/libpcl_sample_consensus.so
-../bin/slamEnd: /usr/lib/libpcl_filters.so
+../bin/slamEnd: /usr/local/lib/libpcl_kdtree.so
+../bin/slamEnd: /usr/local/lib/libpcl_search.so
+../bin/slamEnd: /usr/local/lib/libpcl_visualization.so
+../bin/slamEnd: /usr/local/lib/libpcl_sample_consensus.so
+../bin/slamEnd: /usr/local/lib/libpcl_filters.so
 ../bin/slamEnd: /usr/lib/x86_64-linux-gnu/libboost_system.so
 ../bin/slamEnd: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
 ../bin/slamEnd: /usr/lib/x86_64-linux-gnu/libboost_thread.so
@@ -183,19 +188,20 @@ slamEnd_EXTERNAL_OBJECTS =
 ../bin/slamEnd: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
 ../bin/slamEnd: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
 ../bin/slamEnd: /usr/lib/x86_64-linux-gnu/libboost_regex.so
-../bin/slamEnd: /usr/lib/libpcl_common.so
-../bin/slamEnd: /usr/lib/libpcl_octree.so
+../bin/slamEnd: /usr/local/lib/libpcl_common.so
+../bin/slamEnd: /usr/local/lib/libpcl_octree.so
 ../bin/slamEnd: /usr/lib/libOpenNI.so
-../bin/slamEnd: /usr/lib/libpcl_io.so
+../bin/slamEnd: /usr/lib/libOpenNI2.so
+../bin/slamEnd: /usr/local/lib/libpcl_io.so
 ../bin/slamEnd: /usr/lib/x86_64-linux-gnu/libflann_cpp_s.a
-../bin/slamEnd: /usr/lib/libpcl_kdtree.so
-../bin/slamEnd: /usr/lib/libpcl_search.so
-../bin/slamEnd: /usr/lib/libpcl_visualization.so
-../bin/slamEnd: /usr/lib/libpcl_sample_consensus.so
-../bin/slamEnd: /usr/lib/libpcl_filters.so
+../bin/slamEnd: /usr/local/lib/libpcl_kdtree.so
+../bin/slamEnd: /usr/local/lib/libpcl_search.so
+../bin/slamEnd: /usr/local/lib/libpcl_visualization.so
+../bin/slamEnd: /usr/local/lib/libpcl_sample_consensus.so
+../bin/slamEnd: /usr/local/lib/libpcl_filters.so
 ../bin/slamEnd: src/CMakeFiles/slamEnd.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/hxb/rgbd-slam-tutorial-gx-master/partVII/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/slamEnd"
-	cd /home/hxb/rgbd-slam-tutorial-gx-master/partVII/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/slamEnd.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/slamEnd"
+	cd /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/slamEnd.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/CMakeFiles/slamEnd.dir/build: ../bin/slamEnd
@@ -207,10 +213,10 @@ src/CMakeFiles/slamEnd.dir/requires: src/CMakeFiles/slamEnd.dir/slamEnd.cpp.o.re
 .PHONY : src/CMakeFiles/slamEnd.dir/requires
 
 src/CMakeFiles/slamEnd.dir/clean:
-	cd /home/hxb/rgbd-slam-tutorial-gx-master/partVII/build/src && $(CMAKE_COMMAND) -P CMakeFiles/slamEnd.dir/cmake_clean.cmake
+	cd /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/build/src && $(CMAKE_COMMAND) -P CMakeFiles/slamEnd.dir/cmake_clean.cmake
 .PHONY : src/CMakeFiles/slamEnd.dir/clean
 
 src/CMakeFiles/slamEnd.dir/depend:
-	cd /home/hxb/rgbd-slam-tutorial-gx-master/partVII/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hxb/rgbd-slam-tutorial-gx-master/partVII /home/hxb/rgbd-slam-tutorial-gx-master/partVII/src /home/hxb/rgbd-slam-tutorial-gx-master/partVII/build /home/hxb/rgbd-slam-tutorial-gx-master/partVII/build/src /home/hxb/rgbd-slam-tutorial-gx-master/partVII/build/src/CMakeFiles/slamEnd.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/src /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/build /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/build/src /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/build/src/CMakeFiles/slamEnd.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/CMakeFiles/slamEnd.dir/depend
 

@@ -35,7 +35,7 @@ int main( int argc, char** argv )
     CAMERA_INTRINSIC_PARAMETERS camera = getDefaultCamera();
     computeKeyPointsAndDesp( lastFrame, detector, descriptor );
     PointCloud::Ptr cloud = image2PointCloud( lastFrame.rgb, lastFrame.depth, camera );
-    
+
     pcl::visualization::CloudViewer viewer("viewer");
 
     // 是否显示点云
@@ -60,17 +60,17 @@ int main( int argc, char** argv )
             continue;
         Eigen::Isometry3d T = cvMat2Eigen( result.rvec, result.tvec );
         cout<<"T="<<T.matrix()<<endl;
-        
+
         //cloud = joinPointCloud( cloud, currFrame, T.inverse(), camera );
         cloud = joinPointCloud( cloud, currFrame, T, camera );
-        
+
         if ( visualize == true )
             viewer.showCloud( cloud );
 
         lastFrame = currFrame;
     }
 
-    pcl::io::savePCDFile( "data/result.pcd", *cloud );
+    pcl::io::savePCDFile( "../../data/result.pcd", *cloud );
     return 0;
 }
 
@@ -79,7 +79,7 @@ FRAME readFrame( int index, ParameterReader& pd )
     FRAME f;
     string rgbDir   =   pd.getData("rgb_dir");
     string depthDir =   pd.getData("depth_dir");
-    
+
     string rgbExt   =   pd.getData("rgb_extension");
     string depthExt =   pd.getData("depth_extension");
 

@@ -43,10 +43,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hxb/rgbd-slam-tutorial-gx-master/partVII
+CMAKE_SOURCE_DIR = /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hxb/rgbd-slam-tutorial-gx-master/partVII/build
+CMAKE_BINARY_DIR = /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/build
 
 # Include any dependencies generated for this target.
 include src/CMakeFiles/generate_pointcloud.dir/depend.make
@@ -59,16 +59,16 @@ include src/CMakeFiles/generate_pointcloud.dir/flags.make
 
 src/CMakeFiles/generate_pointcloud.dir/generatePointCloud.cpp.o: src/CMakeFiles/generate_pointcloud.dir/flags.make
 src/CMakeFiles/generate_pointcloud.dir/generatePointCloud.cpp.o: ../src/generatePointCloud.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hxb/rgbd-slam-tutorial-gx-master/partVII/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/generate_pointcloud.dir/generatePointCloud.cpp.o"
-	cd /home/hxb/rgbd-slam-tutorial-gx-master/partVII/build/src && g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/generate_pointcloud.dir/generatePointCloud.cpp.o -c /home/hxb/rgbd-slam-tutorial-gx-master/partVII/src/generatePointCloud.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/generate_pointcloud.dir/generatePointCloud.cpp.o"
+	cd /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/build/src && g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/generate_pointcloud.dir/generatePointCloud.cpp.o -c /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/src/generatePointCloud.cpp
 
 src/CMakeFiles/generate_pointcloud.dir/generatePointCloud.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/generate_pointcloud.dir/generatePointCloud.cpp.i"
-	cd /home/hxb/rgbd-slam-tutorial-gx-master/partVII/build/src && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hxb/rgbd-slam-tutorial-gx-master/partVII/src/generatePointCloud.cpp > CMakeFiles/generate_pointcloud.dir/generatePointCloud.cpp.i
+	cd /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/build/src && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/src/generatePointCloud.cpp > CMakeFiles/generate_pointcloud.dir/generatePointCloud.cpp.i
 
 src/CMakeFiles/generate_pointcloud.dir/generatePointCloud.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/generate_pointcloud.dir/generatePointCloud.cpp.s"
-	cd /home/hxb/rgbd-slam-tutorial-gx-master/partVII/build/src && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hxb/rgbd-slam-tutorial-gx-master/partVII/src/generatePointCloud.cpp -o CMakeFiles/generate_pointcloud.dir/generatePointCloud.cpp.s
+	cd /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/build/src && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/src/generatePointCloud.cpp -o CMakeFiles/generate_pointcloud.dir/generatePointCloud.cpp.s
 
 src/CMakeFiles/generate_pointcloud.dir/generatePointCloud.cpp.o.requires:
 
@@ -104,16 +104,17 @@ generate_pointcloud_EXTERNAL_OBJECTS =
 ../bin/generate_pointcloud: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
 ../bin/generate_pointcloud: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
 ../bin/generate_pointcloud: /usr/lib/x86_64-linux-gnu/libboost_regex.so
-../bin/generate_pointcloud: /usr/lib/libpcl_common.so
-../bin/generate_pointcloud: /usr/lib/libpcl_octree.so
+../bin/generate_pointcloud: /usr/local/lib/libpcl_common.so
+../bin/generate_pointcloud: /usr/local/lib/libpcl_octree.so
 ../bin/generate_pointcloud: /usr/lib/libOpenNI.so
-../bin/generate_pointcloud: /usr/lib/libpcl_io.so
+../bin/generate_pointcloud: /usr/lib/libOpenNI2.so
+../bin/generate_pointcloud: /usr/local/lib/libpcl_io.so
 ../bin/generate_pointcloud: /usr/lib/x86_64-linux-gnu/libflann_cpp_s.a
-../bin/generate_pointcloud: /usr/lib/libpcl_kdtree.so
-../bin/generate_pointcloud: /usr/lib/libpcl_search.so
-../bin/generate_pointcloud: /usr/lib/libpcl_visualization.so
-../bin/generate_pointcloud: /usr/lib/libpcl_sample_consensus.so
-../bin/generate_pointcloud: /usr/lib/libpcl_filters.so
+../bin/generate_pointcloud: /usr/local/lib/libpcl_kdtree.so
+../bin/generate_pointcloud: /usr/local/lib/libpcl_search.so
+../bin/generate_pointcloud: /usr/local/lib/libpcl_visualization.so
+../bin/generate_pointcloud: /usr/local/lib/libpcl_sample_consensus.so
+../bin/generate_pointcloud: /usr/local/lib/libpcl_filters.so
 ../bin/generate_pointcloud: /usr/lib/x86_64-linux-gnu/libboost_system.so
 ../bin/generate_pointcloud: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
 ../bin/generate_pointcloud: /usr/lib/x86_64-linux-gnu/libboost_thread.so
@@ -124,16 +125,19 @@ generate_pointcloud_EXTERNAL_OBJECTS =
 ../bin/generate_pointcloud: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
 ../bin/generate_pointcloud: /usr/lib/x86_64-linux-gnu/libboost_regex.so
 ../bin/generate_pointcloud: /usr/lib/libOpenNI.so
+../bin/generate_pointcloud: /usr/lib/libOpenNI2.so
 ../bin/generate_pointcloud: /usr/lib/x86_64-linux-gnu/libflann_cpp_s.a
+../bin/generate_pointcloud: /usr/lib/libvtkGenericFiltering.so.5.8.0
+../bin/generate_pointcloud: /usr/lib/libvtkGeovis.so.5.8.0
 ../bin/generate_pointcloud: /usr/lib/libvtkCharts.so.5.8.0
-../bin/generate_pointcloud: /usr/lib/libpcl_common.so
-../bin/generate_pointcloud: /usr/lib/libpcl_octree.so
-../bin/generate_pointcloud: /usr/lib/libpcl_io.so
-../bin/generate_pointcloud: /usr/lib/libpcl_kdtree.so
-../bin/generate_pointcloud: /usr/lib/libpcl_search.so
-../bin/generate_pointcloud: /usr/lib/libpcl_visualization.so
-../bin/generate_pointcloud: /usr/lib/libpcl_sample_consensus.so
-../bin/generate_pointcloud: /usr/lib/libpcl_filters.so
+../bin/generate_pointcloud: /usr/local/lib/libpcl_common.so
+../bin/generate_pointcloud: /usr/local/lib/libpcl_octree.so
+../bin/generate_pointcloud: /usr/local/lib/libpcl_io.so
+../bin/generate_pointcloud: /usr/local/lib/libpcl_kdtree.so
+../bin/generate_pointcloud: /usr/local/lib/libpcl_search.so
+../bin/generate_pointcloud: /usr/local/lib/libpcl_visualization.so
+../bin/generate_pointcloud: /usr/local/lib/libpcl_sample_consensus.so
+../bin/generate_pointcloud: /usr/local/lib/libpcl_filters.so
 ../bin/generate_pointcloud: /usr/local/lib/libopencv_nonfree.so.2.4.13
 ../bin/generate_pointcloud: /usr/local/lib/libopencv_ocl.so.2.4.13
 ../bin/generate_pointcloud: /usr/local/lib/libopencv_gpu.so.2.4.13
@@ -151,19 +155,19 @@ generate_pointcloud_EXTERNAL_OBJECTS =
 ../bin/generate_pointcloud: /usr/lib/libvtkViews.so.5.8.0
 ../bin/generate_pointcloud: /usr/lib/libvtkInfovis.so.5.8.0
 ../bin/generate_pointcloud: /usr/lib/libvtkWidgets.so.5.8.0
+../bin/generate_pointcloud: /usr/lib/libvtkVolumeRendering.so.5.8.0
 ../bin/generate_pointcloud: /usr/lib/libvtkHybrid.so.5.8.0
 ../bin/generate_pointcloud: /usr/lib/libvtkParallel.so.5.8.0
-../bin/generate_pointcloud: /usr/lib/libvtkVolumeRendering.so.5.8.0
 ../bin/generate_pointcloud: /usr/lib/libvtkRendering.so.5.8.0
-../bin/generate_pointcloud: /usr/lib/libvtkGraphics.so.5.8.0
 ../bin/generate_pointcloud: /usr/lib/libvtkImaging.so.5.8.0
+../bin/generate_pointcloud: /usr/lib/libvtkGraphics.so.5.8.0
 ../bin/generate_pointcloud: /usr/lib/libvtkIO.so.5.8.0
 ../bin/generate_pointcloud: /usr/lib/libvtkFiltering.so.5.8.0
 ../bin/generate_pointcloud: /usr/lib/libvtkCommon.so.5.8.0
 ../bin/generate_pointcloud: /usr/lib/libvtksys.so.5.8.0
 ../bin/generate_pointcloud: src/CMakeFiles/generate_pointcloud.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/hxb/rgbd-slam-tutorial-gx-master/partVII/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/generate_pointcloud"
-	cd /home/hxb/rgbd-slam-tutorial-gx-master/partVII/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/generate_pointcloud.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/generate_pointcloud"
+	cd /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/generate_pointcloud.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/CMakeFiles/generate_pointcloud.dir/build: ../bin/generate_pointcloud
@@ -175,10 +179,10 @@ src/CMakeFiles/generate_pointcloud.dir/requires: src/CMakeFiles/generate_pointcl
 .PHONY : src/CMakeFiles/generate_pointcloud.dir/requires
 
 src/CMakeFiles/generate_pointcloud.dir/clean:
-	cd /home/hxb/rgbd-slam-tutorial-gx-master/partVII/build/src && $(CMAKE_COMMAND) -P CMakeFiles/generate_pointcloud.dir/cmake_clean.cmake
+	cd /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/build/src && $(CMAKE_COMMAND) -P CMakeFiles/generate_pointcloud.dir/cmake_clean.cmake
 .PHONY : src/CMakeFiles/generate_pointcloud.dir/clean
 
 src/CMakeFiles/generate_pointcloud.dir/depend:
-	cd /home/hxb/rgbd-slam-tutorial-gx-master/partVII/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hxb/rgbd-slam-tutorial-gx-master/partVII /home/hxb/rgbd-slam-tutorial-gx-master/partVII/src /home/hxb/rgbd-slam-tutorial-gx-master/partVII/build /home/hxb/rgbd-slam-tutorial-gx-master/partVII/build/src /home/hxb/rgbd-slam-tutorial-gx-master/partVII/build/src/CMakeFiles/generate_pointcloud.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/src /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/build /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/build/src /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/build/src/CMakeFiles/generate_pointcloud.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/CMakeFiles/generate_pointcloud.dir/depend
 

@@ -1,22 +1,22 @@
 Determining if the pthread_create exist failed with the following output:
-Change Dir: /home/hxb/rgbd-slam-tutorial-gx-master/partV/build/CMakeFiles/CMakeTmp
+Change Dir: /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partV/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_621d3/fast"
-/usr/bin/make -f CMakeFiles/cmTC_621d3.dir/build.make CMakeFiles/cmTC_621d3.dir/build
-make[1]: 正在进入目录 `/home/hxb/rgbd-slam-tutorial-gx-master/partV/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_621d3.dir/CheckSymbolExists.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_621d3.dir/CheckSymbolExists.c.o   -c /home/hxb/rgbd-slam-tutorial-gx-master/partV/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_621d3
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_621d3.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_621d3.dir/CheckSymbolExists.c.o  -o cmTC_621d3 -rdynamic 
-CMakeFiles/cmTC_621d3.dir/CheckSymbolExists.c.o：在函数‘main’中：
+Run Build Command:"/usr/bin/make" "cmTC_82d7a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_82d7a.dir/build.make CMakeFiles/cmTC_82d7a.dir/build
+make[1]: 正在进入目录 `/home/hxb/github/code/rgbd-slam-tutorial-gx-master/partV/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_82d7a.dir/CheckSymbolExists.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_82d7a.dir/CheckSymbolExists.c.o   -c /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partV/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_82d7a
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_82d7a.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_82d7a.dir/CheckSymbolExists.c.o  -o cmTC_82d7a -rdynamic 
+CMakeFiles/cmTC_82d7a.dir/CheckSymbolExists.c.o：在函数‘main’中：
 CheckSymbolExists.c:(.text+0x16)：对‘pthread_create’未定义的引用
 collect2: error: ld returned 1 exit status
-make[1]: *** [cmTC_621d3] 错误 1
-make[1]:正在离开目录 `/home/hxb/rgbd-slam-tutorial-gx-master/partV/build/CMakeFiles/CMakeTmp'
-make: *** [cmTC_621d3/fast] 错误 2
+make[1]: *** [cmTC_82d7a] 错误 1
+make[1]:正在离开目录 `/home/hxb/github/code/rgbd-slam-tutorial-gx-master/partV/build/CMakeFiles/CMakeTmp'
+make: *** [cmTC_82d7a/fast] 错误 2
 
-File /home/hxb/rgbd-slam-tutorial-gx-master/partV/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+File /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partV/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
 #include <pthread.h>
 
@@ -32,20 +32,20 @@ int main(int argc, char** argv)
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/hxb/rgbd-slam-tutorial-gx-master/partV/build/CMakeFiles/CMakeTmp
+Change Dir: /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partV/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_0b09f/fast"
-/usr/bin/make -f CMakeFiles/cmTC_0b09f.dir/build.make CMakeFiles/cmTC_0b09f.dir/build
-make[1]: 正在进入目录 `/home/hxb/rgbd-slam-tutorial-gx-master/partV/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_0b09f.dir/CheckFunctionExists.c.o
-/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_0b09f.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.5/Modules/CheckFunctionExists.c
-Linking C executable cmTC_0b09f
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0b09f.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_0b09f.dir/CheckFunctionExists.c.o  -o cmTC_0b09f -rdynamic -lpthreads 
+Run Build Command:"/usr/bin/make" "cmTC_ad7bb/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ad7bb.dir/build.make CMakeFiles/cmTC_ad7bb.dir/build
+make[1]: 正在进入目录 `/home/hxb/github/code/rgbd-slam-tutorial-gx-master/partV/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ad7bb.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_ad7bb.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.6/Modules/CheckFunctionExists.c
+Linking C executable cmTC_ad7bb
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ad7bb.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_ad7bb.dir/CheckFunctionExists.c.o  -o cmTC_ad7bb -rdynamic -lpthreads 
 /usr/bin/ld: 找不到 -lpthreads
 collect2: error: ld returned 1 exit status
-make[1]: *** [cmTC_0b09f] 错误 1
-make[1]:正在离开目录 `/home/hxb/rgbd-slam-tutorial-gx-master/partV/build/CMakeFiles/CMakeTmp'
-make: *** [cmTC_0b09f/fast] 错误 2
+make[1]: *** [cmTC_ad7bb] 错误 1
+make[1]:正在离开目录 `/home/hxb/github/code/rgbd-slam-tutorial-gx-master/partV/build/CMakeFiles/CMakeTmp'
+make: *** [cmTC_ad7bb/fast] 错误 2
 
 

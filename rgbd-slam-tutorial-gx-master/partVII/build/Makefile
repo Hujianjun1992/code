@@ -48,10 +48,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hxb/rgbd-slam-tutorial-gx-master/partVII
+CMAKE_SOURCE_DIR = /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hxb/rgbd-slam-tutorial-gx-master/partVII/build
+CMAKE_BINARY_DIR = /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hxb/rgbd-slam-tutorial-gx-master/partVII/build/CMakeFiles /home/hxb/rgbd-slam-tutorial-gx-master/partVII/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/build/CMakeFiles /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hxb/rgbd-slam-tutorial-gx-master/partVII/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named joinPointCloud
+
+# Build rule for target.
+joinPointCloud: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 joinPointCloud
+.PHONY : joinPointCloud
+
+# fast build rule for target.
+joinPointCloud/fast:
+	$(MAKE) -f src/CMakeFiles/joinPointCloud.dir/build.make src/CMakeFiles/joinPointCloud.dir/build
+.PHONY : joinPointCloud/fast
+
+#=============================================================================
 # Target rules for targets named visualOdometry
 
 # Build rule for target.
@@ -124,30 +137,17 @@ visualOdometry/fast:
 .PHONY : visualOdometry/fast
 
 #=============================================================================
-# Target rules for targets named detectFeatures
+# Target rules for targets named main
 
 # Build rule for target.
-detectFeatures: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 detectFeatures
-.PHONY : detectFeatures
+main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 main
+.PHONY : main
 
 # fast build rule for target.
-detectFeatures/fast:
-	$(MAKE) -f src/CMakeFiles/detectFeatures.dir/build.make src/CMakeFiles/detectFeatures.dir/build
-.PHONY : detectFeatures/fast
-
-#=============================================================================
-# Target rules for targets named slambase
-
-# Build rule for target.
-slambase: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 slambase
-.PHONY : slambase
-
-# fast build rule for target.
-slambase/fast:
-	$(MAKE) -f src/CMakeFiles/slambase.dir/build.make src/CMakeFiles/slambase.dir/build
-.PHONY : slambase/fast
+main/fast:
+	$(MAKE) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/build
+.PHONY : main/fast
 
 #=============================================================================
 # Target rules for targets named slam
@@ -163,17 +163,17 @@ slam/fast:
 .PHONY : slam/fast
 
 #=============================================================================
-# Target rules for targets named slamEnd
+# Target rules for targets named slambase
 
 # Build rule for target.
-slamEnd: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 slamEnd
-.PHONY : slamEnd
+slambase: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 slambase
+.PHONY : slambase
 
 # fast build rule for target.
-slamEnd/fast:
-	$(MAKE) -f src/CMakeFiles/slamEnd.dir/build.make src/CMakeFiles/slamEnd.dir/build
-.PHONY : slamEnd/fast
+slambase/fast:
+	$(MAKE) -f src/CMakeFiles/slambase.dir/build.make src/CMakeFiles/slambase.dir/build
+.PHONY : slambase/fast
 
 #=============================================================================
 # Target rules for targets named generate_pointcloud
@@ -189,30 +189,30 @@ generate_pointcloud/fast:
 .PHONY : generate_pointcloud/fast
 
 #=============================================================================
-# Target rules for targets named joinPointCloud
+# Target rules for targets named detectFeatures
 
 # Build rule for target.
-joinPointCloud: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 joinPointCloud
-.PHONY : joinPointCloud
+detectFeatures: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 detectFeatures
+.PHONY : detectFeatures
 
 # fast build rule for target.
-joinPointCloud/fast:
-	$(MAKE) -f src/CMakeFiles/joinPointCloud.dir/build.make src/CMakeFiles/joinPointCloud.dir/build
-.PHONY : joinPointCloud/fast
+detectFeatures/fast:
+	$(MAKE) -f src/CMakeFiles/detectFeatures.dir/build.make src/CMakeFiles/detectFeatures.dir/build
+.PHONY : detectFeatures/fast
 
 #=============================================================================
-# Target rules for targets named main
+# Target rules for targets named slamEnd
 
 # Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 main
-.PHONY : main
+slamEnd: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 slamEnd
+.PHONY : slamEnd
 
 # fast build rule for target.
-main/fast:
-	$(MAKE) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/build
-.PHONY : main/fast
+slamEnd/fast:
+	$(MAKE) -f src/CMakeFiles/slamEnd.dir/build.make src/CMakeFiles/slamEnd.dir/build
+.PHONY : slamEnd/fast
 
 # Help Target
 help:
@@ -222,14 +222,14 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... visualOdometry"
-	@echo "... detectFeatures"
-	@echo "... slambase"
-	@echo "... slam"
-	@echo "... slamEnd"
-	@echo "... generate_pointcloud"
 	@echo "... joinPointCloud"
+	@echo "... visualOdometry"
 	@echo "... main"
+	@echo "... slam"
+	@echo "... slambase"
+	@echo "... generate_pointcloud"
+	@echo "... detectFeatures"
+	@echo "... slamEnd"
 .PHONY : help
 
 

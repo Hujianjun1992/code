@@ -1,1 +1,1 @@
-g++     -Wno-deprecated -g    CMakeFiles/main.dir/main.cpp.o  -o ../../bin/main  -L/home/hxb/rgbd-slam-tutorial-gx-master/partV/lib -rdynamic 
+g++     -Wno-deprecated -g    CMakeFiles/main.dir/main.cpp.o  -o ../../bin/main  -L/home/hxb/github/code/rgbd-slam-tutorial-gx-master/partV/lib -rdynamic 

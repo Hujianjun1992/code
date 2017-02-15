@@ -1,7 +1,7 @@
 /*************************************************************************
 	> File Name: src/jointPointCloud.cpp
 	> Author: Xiang gao
-	> Mail: gaoxiang12@mails.tsinghua.edu.cn 
+	> Mail: gaoxiang12@mails.tsinghua.edu.cn
 	> Created Time: 2015年07月22日 星期三 20时46分08秒
  ************************************************************************/
 
@@ -25,7 +25,7 @@ int main( int argc, char** argv )
     ParameterReader pd;
     // 声明两个帧，FRAME结构请见include/slamBase.h
     FRAME frame1, frame2;
-    
+
     //读取图像
     frame1.rgb = cv::imread( "./data/rgb1.png" );
     frame1.depth = cv::imread( "./data/depth1.png", -1);
@@ -60,7 +60,7 @@ int main( int argc, char** argv )
     cv::Rodrigues( result.rvec, R );
     Eigen::Matrix3d r;
     cv::cv2eigen(R, r);
-  
+
     // 将平移向量和旋转矩阵转换成变换矩阵
     Eigen::Isometry3d T = Eigen::Isometry3d::Identity();
 
@@ -68,8 +68,8 @@ int main( int argc, char** argv )
     cout<<"translation"<<endl;
     Eigen::Translation<double,3> trans(result.tvec.at<double>(0,0), result.tvec.at<double>(0,1), result.tvec.at<double>(0,2));
     T = angle;
-    T(0,3) = result.tvec.at<double>(0,0); 
-    T(1,3) = result.tvec.at<double>(0,1); 
+    T(0,3) = result.tvec.at<double>(0,0);
+    T(1,3) = result.tvec.at<double>(0,1);
     T(2,3) = result.tvec.at<double>(0,2);
 
     // 转换点云
@@ -89,7 +89,7 @@ int main( int argc, char** argv )
     viewer.showCloud( output );
     while( !viewer.wasStopped() )
     {
-        
+
     }
     return 0;
 }

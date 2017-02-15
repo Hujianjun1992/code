@@ -28,7 +28,7 @@ depth_extension=.png
 # 点云分辨率
 voxel_grid=0.01
 # 是否实时可视化
-visualize_pointcloud=yes
+visualize_pointcloud=no
 # 最小匹配数量
 min_good_match=10
 # 最小内点

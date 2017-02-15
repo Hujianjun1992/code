@@ -43,10 +43,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hxb/rgbd-slam-tutorial-gx-master/partVII
+CMAKE_SOURCE_DIR = /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hxb/rgbd-slam-tutorial-gx-master/partVII/build
+CMAKE_BINARY_DIR = /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/build
 
 # Include any dependencies generated for this target.
 include src/CMakeFiles/joinPointCloud.dir/depend.make
@@ -59,16 +59,16 @@ include src/CMakeFiles/joinPointCloud.dir/flags.make
 
 src/CMakeFiles/joinPointCloud.dir/joinPointCloud.cpp.o: src/CMakeFiles/joinPointCloud.dir/flags.make
 src/CMakeFiles/joinPointCloud.dir/joinPointCloud.cpp.o: ../src/joinPointCloud.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hxb/rgbd-slam-tutorial-gx-master/partVII/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/joinPointCloud.dir/joinPointCloud.cpp.o"
-	cd /home/hxb/rgbd-slam-tutorial-gx-master/partVII/build/src && g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/joinPointCloud.dir/joinPointCloud.cpp.o -c /home/hxb/rgbd-slam-tutorial-gx-master/partVII/src/joinPointCloud.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/joinPointCloud.dir/joinPointCloud.cpp.o"
+	cd /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/build/src && g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/joinPointCloud.dir/joinPointCloud.cpp.o -c /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/src/joinPointCloud.cpp
 
 src/CMakeFiles/joinPointCloud.dir/joinPointCloud.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/joinPointCloud.dir/joinPointCloud.cpp.i"
-	cd /home/hxb/rgbd-slam-tutorial-gx-master/partVII/build/src && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hxb/rgbd-slam-tutorial-gx-master/partVII/src/joinPointCloud.cpp > CMakeFiles/joinPointCloud.dir/joinPointCloud.cpp.i
+	cd /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/build/src && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/src/joinPointCloud.cpp > CMakeFiles/joinPointCloud.dir/joinPointCloud.cpp.i
 
 src/CMakeFiles/joinPointCloud.dir/joinPointCloud.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/joinPointCloud.dir/joinPointCloud.cpp.s"
-	cd /home/hxb/rgbd-slam-tutorial-gx-master/partVII/build/src && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hxb/rgbd-slam-tutorial-gx-master/partVII/src/joinPointCloud.cpp -o CMakeFiles/joinPointCloud.dir/joinPointCloud.cpp.s
+	cd /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/build/src && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/src/joinPointCloud.cpp -o CMakeFiles/joinPointCloud.dir/joinPointCloud.cpp.s
 
 src/CMakeFiles/joinPointCloud.dir/joinPointCloud.cpp.o.requires:
 
@@ -105,16 +105,17 @@ joinPointCloud_EXTERNAL_OBJECTS =
 ../bin/joinPointCloud: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
 ../bin/joinPointCloud: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
 ../bin/joinPointCloud: /usr/lib/x86_64-linux-gnu/libboost_regex.so
-../bin/joinPointCloud: /usr/lib/libpcl_common.so
-../bin/joinPointCloud: /usr/lib/libpcl_octree.so
+../bin/joinPointCloud: /usr/local/lib/libpcl_common.so
+../bin/joinPointCloud: /usr/local/lib/libpcl_octree.so
 ../bin/joinPointCloud: /usr/lib/libOpenNI.so
-../bin/joinPointCloud: /usr/lib/libpcl_io.so
+../bin/joinPointCloud: /usr/lib/libOpenNI2.so
+../bin/joinPointCloud: /usr/local/lib/libpcl_io.so
 ../bin/joinPointCloud: /usr/lib/x86_64-linux-gnu/libflann_cpp_s.a
-../bin/joinPointCloud: /usr/lib/libpcl_kdtree.so
-../bin/joinPointCloud: /usr/lib/libpcl_search.so
-../bin/joinPointCloud: /usr/lib/libpcl_visualization.so
-../bin/joinPointCloud: /usr/lib/libpcl_sample_consensus.so
-../bin/joinPointCloud: /usr/lib/libpcl_filters.so
+../bin/joinPointCloud: /usr/local/lib/libpcl_kdtree.so
+../bin/joinPointCloud: /usr/local/lib/libpcl_search.so
+../bin/joinPointCloud: /usr/local/lib/libpcl_visualization.so
+../bin/joinPointCloud: /usr/local/lib/libpcl_sample_consensus.so
+../bin/joinPointCloud: /usr/local/lib/libpcl_filters.so
 ../bin/joinPointCloud: /usr/lib/x86_64-linux-gnu/libboost_system.so
 ../bin/joinPointCloud: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
 ../bin/joinPointCloud: /usr/lib/x86_64-linux-gnu/libboost_thread.so
@@ -125,7 +126,10 @@ joinPointCloud_EXTERNAL_OBJECTS =
 ../bin/joinPointCloud: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
 ../bin/joinPointCloud: /usr/lib/x86_64-linux-gnu/libboost_regex.so
 ../bin/joinPointCloud: /usr/lib/libOpenNI.so
+../bin/joinPointCloud: /usr/lib/libOpenNI2.so
 ../bin/joinPointCloud: /usr/lib/x86_64-linux-gnu/libflann_cpp_s.a
+../bin/joinPointCloud: /usr/lib/libvtkGenericFiltering.so.5.8.0
+../bin/joinPointCloud: /usr/lib/libvtkGeovis.so.5.8.0
 ../bin/joinPointCloud: /usr/lib/libvtkCharts.so.5.8.0
 ../bin/joinPointCloud: /usr/local/lib/libopencv_nonfree.so.2.4.13
 ../bin/joinPointCloud: /usr/local/lib/libopencv_ocl.so.2.4.13
@@ -144,12 +148,12 @@ joinPointCloud_EXTERNAL_OBJECTS =
 ../bin/joinPointCloud: /usr/lib/libvtkViews.so.5.8.0
 ../bin/joinPointCloud: /usr/lib/libvtkInfovis.so.5.8.0
 ../bin/joinPointCloud: /usr/lib/libvtkWidgets.so.5.8.0
+../bin/joinPointCloud: /usr/lib/libvtkVolumeRendering.so.5.8.0
 ../bin/joinPointCloud: /usr/lib/libvtkHybrid.so.5.8.0
 ../bin/joinPointCloud: /usr/lib/libvtkParallel.so.5.8.0
-../bin/joinPointCloud: /usr/lib/libvtkVolumeRendering.so.5.8.0
 ../bin/joinPointCloud: /usr/lib/libvtkRendering.so.5.8.0
-../bin/joinPointCloud: /usr/lib/libvtkGraphics.so.5.8.0
 ../bin/joinPointCloud: /usr/lib/libvtkImaging.so.5.8.0
+../bin/joinPointCloud: /usr/lib/libvtkGraphics.so.5.8.0
 ../bin/joinPointCloud: /usr/lib/libvtkIO.so.5.8.0
 ../bin/joinPointCloud: /usr/lib/libvtkFiltering.so.5.8.0
 ../bin/joinPointCloud: /usr/lib/libvtkCommon.so.5.8.0
@@ -163,16 +167,17 @@ joinPointCloud_EXTERNAL_OBJECTS =
 ../bin/joinPointCloud: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
 ../bin/joinPointCloud: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
 ../bin/joinPointCloud: /usr/lib/x86_64-linux-gnu/libboost_regex.so
-../bin/joinPointCloud: /usr/lib/libpcl_common.so
-../bin/joinPointCloud: /usr/lib/libpcl_octree.so
+../bin/joinPointCloud: /usr/local/lib/libpcl_common.so
+../bin/joinPointCloud: /usr/local/lib/libpcl_octree.so
 ../bin/joinPointCloud: /usr/lib/libOpenNI.so
-../bin/joinPointCloud: /usr/lib/libpcl_io.so
+../bin/joinPointCloud: /usr/lib/libOpenNI2.so
+../bin/joinPointCloud: /usr/local/lib/libpcl_io.so
 ../bin/joinPointCloud: /usr/lib/x86_64-linux-gnu/libflann_cpp_s.a
-../bin/joinPointCloud: /usr/lib/libpcl_kdtree.so
-../bin/joinPointCloud: /usr/lib/libpcl_search.so
-../bin/joinPointCloud: /usr/lib/libpcl_visualization.so
-../bin/joinPointCloud: /usr/lib/libpcl_sample_consensus.so
-../bin/joinPointCloud: /usr/lib/libpcl_filters.so
+../bin/joinPointCloud: /usr/local/lib/libpcl_kdtree.so
+../bin/joinPointCloud: /usr/local/lib/libpcl_search.so
+../bin/joinPointCloud: /usr/local/lib/libpcl_visualization.so
+../bin/joinPointCloud: /usr/local/lib/libpcl_sample_consensus.so
+../bin/joinPointCloud: /usr/local/lib/libpcl_filters.so
 ../bin/joinPointCloud: /usr/lib/x86_64-linux-gnu/libboost_system.so
 ../bin/joinPointCloud: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
 ../bin/joinPointCloud: /usr/lib/x86_64-linux-gnu/libboost_thread.so
@@ -182,19 +187,20 @@ joinPointCloud_EXTERNAL_OBJECTS =
 ../bin/joinPointCloud: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
 ../bin/joinPointCloud: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
 ../bin/joinPointCloud: /usr/lib/x86_64-linux-gnu/libboost_regex.so
-../bin/joinPointCloud: /usr/lib/libpcl_common.so
-../bin/joinPointCloud: /usr/lib/libpcl_octree.so
+../bin/joinPointCloud: /usr/local/lib/libpcl_common.so
+../bin/joinPointCloud: /usr/local/lib/libpcl_octree.so
 ../bin/joinPointCloud: /usr/lib/libOpenNI.so
-../bin/joinPointCloud: /usr/lib/libpcl_io.so
+../bin/joinPointCloud: /usr/lib/libOpenNI2.so
+../bin/joinPointCloud: /usr/local/lib/libpcl_io.so
 ../bin/joinPointCloud: /usr/lib/x86_64-linux-gnu/libflann_cpp_s.a
-../bin/joinPointCloud: /usr/lib/libpcl_kdtree.so
-../bin/joinPointCloud: /usr/lib/libpcl_search.so
-../bin/joinPointCloud: /usr/lib/libpcl_visualization.so
-../bin/joinPointCloud: /usr/lib/libpcl_sample_consensus.so
-../bin/joinPointCloud: /usr/lib/libpcl_filters.so
+../bin/joinPointCloud: /usr/local/lib/libpcl_kdtree.so
+../bin/joinPointCloud: /usr/local/lib/libpcl_search.so
+../bin/joinPointCloud: /usr/local/lib/libpcl_visualization.so
+../bin/joinPointCloud: /usr/local/lib/libpcl_sample_consensus.so
+../bin/joinPointCloud: /usr/local/lib/libpcl_filters.so
 ../bin/joinPointCloud: src/CMakeFiles/joinPointCloud.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/hxb/rgbd-slam-tutorial-gx-master/partVII/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/joinPointCloud"
-	cd /home/hxb/rgbd-slam-tutorial-gx-master/partVII/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/joinPointCloud.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/joinPointCloud"
+	cd /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/joinPointCloud.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/CMakeFiles/joinPointCloud.dir/build: ../bin/joinPointCloud
@@ -206,10 +212,10 @@ src/CMakeFiles/joinPointCloud.dir/requires: src/CMakeFiles/joinPointCloud.dir/jo
 .PHONY : src/CMakeFiles/joinPointCloud.dir/requires
 
 src/CMakeFiles/joinPointCloud.dir/clean:
-	cd /home/hxb/rgbd-slam-tutorial-gx-master/partVII/build/src && $(CMAKE_COMMAND) -P CMakeFiles/joinPointCloud.dir/cmake_clean.cmake
+	cd /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/build/src && $(CMAKE_COMMAND) -P CMakeFiles/joinPointCloud.dir/cmake_clean.cmake
 .PHONY : src/CMakeFiles/joinPointCloud.dir/clean
 
 src/CMakeFiles/joinPointCloud.dir/depend:
-	cd /home/hxb/rgbd-slam-tutorial-gx-master/partVII/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hxb/rgbd-slam-tutorial-gx-master/partVII /home/hxb/rgbd-slam-tutorial-gx-master/partVII/src /home/hxb/rgbd-slam-tutorial-gx-master/partVII/build /home/hxb/rgbd-slam-tutorial-gx-master/partVII/build/src /home/hxb/rgbd-slam-tutorial-gx-master/partVII/build/src/CMakeFiles/joinPointCloud.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/src /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/build /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/build/src /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/build/src/CMakeFiles/joinPointCloud.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/CMakeFiles/joinPointCloud.dir/depend
 

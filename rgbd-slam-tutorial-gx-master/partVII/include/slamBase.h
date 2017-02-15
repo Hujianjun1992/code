@@ -7,7 +7,7 @@
  ************************************************************************/
 # pragma once
 
-// 各种头文件 
+// 各种头文件
 // C++标准库
 #include <fstream>
 #include <vector>
@@ -38,15 +38,15 @@ typedef pcl::PointXYZRGBA PointT;
 typedef pcl::PointCloud<PointT> PointCloud;
 
 // 相机内参结构
-struct CAMERA_INTRINSIC_PARAMETERS 
-{ 
+struct CAMERA_INTRINSIC_PARAMETERS
+{
     double cx, cy, fx, fy, scale;
 };
 
 // 帧结构
 struct FRAME
 {
-    int frameID; 
+    int frameID;
     cv::Mat rgb, depth; //该帧对应的彩色图与深度图
     cv::Mat desp;       //特征描述子
     vector<cv::KeyPoint> kp; //关键点
@@ -77,7 +77,7 @@ RESULT_OF_PNP estimateMotion( FRAME& frame1, FRAME& frame2, CAMERA_INTRINSIC_PAR
 // cvMat2Eigen
 Eigen::Isometry3d cvMat2Eigen( cv::Mat& rvec, cv::Mat& tvec );
 
-// joinPointCloud 
+// joinPointCloud
 PointCloud::Ptr joinPointCloud( PointCloud::Ptr original, FRAME& newFrame, Eigen::Isometry3d T, CAMERA_INTRINSIC_PARAMETERS& camera ) ;
 
 // 参数读取类

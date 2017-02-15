@@ -29,8 +29,8 @@ using namespace std;
 #include <g2o/core/optimization_algorithm_levenberg.h>
 
 // 把g2o的定义放到前面
-typedef g2o::BlockSolver_6_3 SlamBlockSolver; 
-typedef g2o::LinearSolverCSparse< SlamBlockSolver::PoseMatrixType > SlamLinearSolver; 
+typedef g2o::BlockSolver_6_3 SlamBlockSolver;
+typedef g2o::LinearSolverCSparse< SlamBlockSolver::PoseMatrixType > SlamLinearSolver;
 
 // 给定index，读取一帧数据
 FRAME readFrame( int index, ParameterReader& pd );
@@ -38,7 +38,7 @@ FRAME readFrame( int index, ParameterReader& pd );
 double normofTransform( cv::Mat rvec, cv::Mat tvec );
 
 // 检测两个帧，结果定义
-enum CHECK_RESULT {NOT_MATCHED=0, TOO_FAR_AWAY, TOO_CLOSE, KEYFRAME}; 
+enum CHECK_RESULT {NOT_MATCHED=0, TOO_FAR_AWAY, TOO_CLOSE, KEYFRAME};
 // 函数声明
 CHECK_RESULT checkKeyframes( FRAME& f1, FRAME& f2, g2o::SparseOptimizer& opti, bool is_loops=false );
 // 检测近距离的回环
@@ -54,7 +54,7 @@ int main( int argc, char** argv )
     int endIndex    =   atoi( pd.getData( "end_index"   ).c_str() );
 
     // 所有的关键帧都放在了这里
-    vector< FRAME > keyframes; 
+    vector< FRAME > keyframes;
     // initialize
     cout<<"Initializing ..."<<endl;
     int currIndex = startIndex; // 当前索引为currIndex
@@ -65,7 +65,7 @@ int main( int argc, char** argv )
     CAMERA_INTRINSIC_PARAMETERS camera = getDefaultCamera();
     computeKeyPointsAndDesp( currFrame, detector, descriptor );
     PointCloud::Ptr cloud = image2PointCloud( currFrame.rgb, currFrame.depth, camera );
-    /******************************* 
+    /*******************************
     // 新增:有关g2o的初始化
     *******************************/
     // 初始化求解器
@@ -75,27 +75,21 @@ int main( int argc, char** argv )
     g2o::OptimizationAlgorithmLevenberg* solver = new g2o::OptimizationAlgorithmLevenberg( blockSolver );
 
     g2o::SparseOptimizer globalOptimizer;  // 最后用的就是这个东东
-    globalOptimizer.setAlgorithm( solver ); 
+    globalOptimizer.setAlgorithm( solver );
     // 不要输出调试信息
     globalOptimizer.setVerbose( false );
-    
 
-	cout << "hujianjun0" << endl;
+
     // 向globalOptimizer增加第一个顶点
     g2o::VertexSE3* v = new g2o::VertexSE3();
-	cout << "hujianjun1" << endl;
     v->setId( currIndex );
-	cout << "hujianjun2" << endl;
     v->setEstimate( Eigen::Isometry3d::Identity() ); //估计为单位矩阵
     v->setFixed( true ); //第一个顶点固定，不用优化
     globalOptimizer.addVertex( v );
-    
-	cout << "hujianjun3" << endl;
+
     keyframes.push_back( currFrame );
 
-	cout << "hujianjun4" << endl;
     double keyframe_threshold = atof( pd.getData("keyframe_threshold").c_str() );
-	cout << "hujianjun5" << endl;
     bool check_loop_closure = pd.getData("check_loop_closure")==string("yes");
     for ( currIndex=startIndex+1; currIndex<endIndex; currIndex++ )
     {
@@ -137,7 +131,7 @@ int main( int argc, char** argv )
         default:
             break;
         }
-        
+
     }
 
     // 优化
@@ -182,8 +176,7 @@ int main( int argc, char** argv )
     voxel.setInputCloud( output );
     voxel.filter( *tmp );
     //存储
-    pcl::io::savePCDFile( "./data/result.pcd", *tmp );
-    
+    pcl::io::savePCDFile( "../../data/result.pcd", *tmp );
     cout<<"Final map is saved."<<endl;
     globalOptimizer.clear();
 
@@ -195,7 +188,7 @@ FRAME readFrame( int index, ParameterReader& pd )
     FRAME f;
     string rgbDir   =   pd.getData("rgb_dir");
     string depthDir =   pd.getData("depth_dir");
-    
+
     string rgbExt   =   pd.getData("rgb_extension");
     string depthExt =   pd.getData("depth_extension");
 
@@ -285,7 +278,7 @@ void checkNearbyLoops( vector<FRAME>& frames, FRAME& currFrame, g2o::SparseOptim
 {
     static ParameterReader pd;
     static int nearby_loops = atoi( pd.getData("nearby_loops").c_str() );
-    
+
     // 就是把currFrame和 frames里末尾几个测一遍
     if ( frames.size() <= nearby_loops )
     {
@@ -311,7 +304,7 @@ void checkRandomLoops( vector<FRAME>& frames, FRAME& currFrame, g2o::SparseOptim
     static int random_loops = atoi( pd.getData("random_loops").c_str() );
     srand( (unsigned int) time(NULL) );
     // 随机取一些帧进行检测
-    
+
     if ( frames.size() <= random_loops )
     {
         // no enough keyframes, check everyone

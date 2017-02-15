@@ -1,4 +1,4 @@
-# Install script for directory: /home/hxb/rgbd-slam-tutorial-gx-master/partVII/src
+# Install script for directory: /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -43,10 +43,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hxb/rgbd-slam-tutorial-gx-master/partVII
+CMAKE_SOURCE_DIR = /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hxb/rgbd-slam-tutorial-gx-master/partVII/build
+CMAKE_BINARY_DIR = /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/build
 
 # Include any dependencies generated for this target.
 include src/CMakeFiles/slam.dir/depend.make
@@ -59,16 +59,16 @@ include src/CMakeFiles/slam.dir/flags.make
 
 src/CMakeFiles/slam.dir/slam.cpp.o: src/CMakeFiles/slam.dir/flags.make
 src/CMakeFiles/slam.dir/slam.cpp.o: ../src/slam.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hxb/rgbd-slam-tutorial-gx-master/partVII/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/slam.dir/slam.cpp.o"
-	cd /home/hxb/rgbd-slam-tutorial-gx-master/partVII/build/src && g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/slam.dir/slam.cpp.o -c /home/hxb/rgbd-slam-tutorial-gx-master/partVII/src/slam.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/slam.dir/slam.cpp.o"
+	cd /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/build/src && g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/slam.dir/slam.cpp.o -c /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/src/slam.cpp
 
 src/CMakeFiles/slam.dir/slam.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/slam.dir/slam.cpp.i"
-	cd /home/hxb/rgbd-slam-tutorial-gx-master/partVII/build/src && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hxb/rgbd-slam-tutorial-gx-master/partVII/src/slam.cpp > CMakeFiles/slam.dir/slam.cpp.i
+	cd /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/build/src && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/src/slam.cpp > CMakeFiles/slam.dir/slam.cpp.i
 
 src/CMakeFiles/slam.dir/slam.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/slam.dir/slam.cpp.s"
-	cd /home/hxb/rgbd-slam-tutorial-gx-master/partVII/build/src && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hxb/rgbd-slam-tutorial-gx-master/partVII/src/slam.cpp -o CMakeFiles/slam.dir/slam.cpp.s
+	cd /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/build/src && g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/src/slam.cpp -o CMakeFiles/slam.dir/slam.cpp.s
 
 src/CMakeFiles/slam.dir/slam.cpp.o.requires:
 
@@ -105,16 +105,17 @@ slam_EXTERNAL_OBJECTS =
 ../bin/slam: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
 ../bin/slam: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
 ../bin/slam: /usr/lib/x86_64-linux-gnu/libboost_regex.so
-../bin/slam: /usr/lib/libpcl_common.so
-../bin/slam: /usr/lib/libpcl_octree.so
+../bin/slam: /usr/local/lib/libpcl_common.so
+../bin/slam: /usr/local/lib/libpcl_octree.so
 ../bin/slam: /usr/lib/libOpenNI.so
-../bin/slam: /usr/lib/libpcl_io.so
+../bin/slam: /usr/lib/libOpenNI2.so
+../bin/slam: /usr/local/lib/libpcl_io.so
 ../bin/slam: /usr/lib/x86_64-linux-gnu/libflann_cpp_s.a
-../bin/slam: /usr/lib/libpcl_kdtree.so
-../bin/slam: /usr/lib/libpcl_search.so
-../bin/slam: /usr/lib/libpcl_visualization.so
-../bin/slam: /usr/lib/libpcl_sample_consensus.so
-../bin/slam: /usr/lib/libpcl_filters.so
+../bin/slam: /usr/local/lib/libpcl_kdtree.so
+../bin/slam: /usr/local/lib/libpcl_search.so
+../bin/slam: /usr/local/lib/libpcl_visualization.so
+../bin/slam: /usr/local/lib/libpcl_sample_consensus.so
+../bin/slam: /usr/local/lib/libpcl_filters.so
 ../bin/slam: /usr/lib/x86_64-linux-gnu/libboost_system.so
 ../bin/slam: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
 ../bin/slam: /usr/lib/x86_64-linux-gnu/libboost_thread.so
@@ -125,7 +126,10 @@ slam_EXTERNAL_OBJECTS =
 ../bin/slam: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
 ../bin/slam: /usr/lib/x86_64-linux-gnu/libboost_regex.so
 ../bin/slam: /usr/lib/libOpenNI.so
+../bin/slam: /usr/lib/libOpenNI2.so
 ../bin/slam: /usr/lib/x86_64-linux-gnu/libflann_cpp_s.a
+../bin/slam: /usr/lib/libvtkGenericFiltering.so.5.8.0
+../bin/slam: /usr/lib/libvtkGeovis.so.5.8.0
 ../bin/slam: /usr/lib/libvtkCharts.so.5.8.0
 ../bin/slam: /usr/lib/x86_64-linux-gnu/libcxsparse.so
 ../bin/slam: /usr/local/lib/libopencv_nonfree.so.2.4.13
@@ -145,12 +149,12 @@ slam_EXTERNAL_OBJECTS =
 ../bin/slam: /usr/lib/libvtkViews.so.5.8.0
 ../bin/slam: /usr/lib/libvtkInfovis.so.5.8.0
 ../bin/slam: /usr/lib/libvtkWidgets.so.5.8.0
+../bin/slam: /usr/lib/libvtkVolumeRendering.so.5.8.0
 ../bin/slam: /usr/lib/libvtkHybrid.so.5.8.0
 ../bin/slam: /usr/lib/libvtkParallel.so.5.8.0
-../bin/slam: /usr/lib/libvtkVolumeRendering.so.5.8.0
 ../bin/slam: /usr/lib/libvtkRendering.so.5.8.0
-../bin/slam: /usr/lib/libvtkGraphics.so.5.8.0
 ../bin/slam: /usr/lib/libvtkImaging.so.5.8.0
+../bin/slam: /usr/lib/libvtkGraphics.so.5.8.0
 ../bin/slam: /usr/lib/libvtkIO.so.5.8.0
 ../bin/slam: /usr/lib/libvtkFiltering.so.5.8.0
 ../bin/slam: /usr/lib/libvtkCommon.so.5.8.0
@@ -164,16 +168,17 @@ slam_EXTERNAL_OBJECTS =
 ../bin/slam: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
 ../bin/slam: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
 ../bin/slam: /usr/lib/x86_64-linux-gnu/libboost_regex.so
-../bin/slam: /usr/lib/libpcl_common.so
-../bin/slam: /usr/lib/libpcl_octree.so
+../bin/slam: /usr/local/lib/libpcl_common.so
+../bin/slam: /usr/local/lib/libpcl_octree.so
 ../bin/slam: /usr/lib/libOpenNI.so
-../bin/slam: /usr/lib/libpcl_io.so
+../bin/slam: /usr/lib/libOpenNI2.so
+../bin/slam: /usr/local/lib/libpcl_io.so
 ../bin/slam: /usr/lib/x86_64-linux-gnu/libflann_cpp_s.a
-../bin/slam: /usr/lib/libpcl_kdtree.so
-../bin/slam: /usr/lib/libpcl_search.so
-../bin/slam: /usr/lib/libpcl_visualization.so
-../bin/slam: /usr/lib/libpcl_sample_consensus.so
-../bin/slam: /usr/lib/libpcl_filters.so
+../bin/slam: /usr/local/lib/libpcl_kdtree.so
+../bin/slam: /usr/local/lib/libpcl_search.so
+../bin/slam: /usr/local/lib/libpcl_visualization.so
+../bin/slam: /usr/local/lib/libpcl_sample_consensus.so
+../bin/slam: /usr/local/lib/libpcl_filters.so
 ../bin/slam: /usr/lib/x86_64-linux-gnu/libboost_system.so
 ../bin/slam: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
 ../bin/slam: /usr/lib/x86_64-linux-gnu/libboost_thread.so
@@ -183,19 +188,20 @@ slam_EXTERNAL_OBJECTS =
 ../bin/slam: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
 ../bin/slam: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
 ../bin/slam: /usr/lib/x86_64-linux-gnu/libboost_regex.so
-../bin/slam: /usr/lib/libpcl_common.so
-../bin/slam: /usr/lib/libpcl_octree.so
+../bin/slam: /usr/local/lib/libpcl_common.so
+../bin/slam: /usr/local/lib/libpcl_octree.so
 ../bin/slam: /usr/lib/libOpenNI.so
-../bin/slam: /usr/lib/libpcl_io.so
+../bin/slam: /usr/lib/libOpenNI2.so
+../bin/slam: /usr/local/lib/libpcl_io.so
 ../bin/slam: /usr/lib/x86_64-linux-gnu/libflann_cpp_s.a
-../bin/slam: /usr/lib/libpcl_kdtree.so
-../bin/slam: /usr/lib/libpcl_search.so
-../bin/slam: /usr/lib/libpcl_visualization.so
-../bin/slam: /usr/lib/libpcl_sample_consensus.so
-../bin/slam: /usr/lib/libpcl_filters.so
+../bin/slam: /usr/local/lib/libpcl_kdtree.so
+../bin/slam: /usr/local/lib/libpcl_search.so
+../bin/slam: /usr/local/lib/libpcl_visualization.so
+../bin/slam: /usr/local/lib/libpcl_sample_consensus.so
+../bin/slam: /usr/local/lib/libpcl_filters.so
 ../bin/slam: src/CMakeFiles/slam.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/hxb/rgbd-slam-tutorial-gx-master/partVII/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/slam"
-	cd /home/hxb/rgbd-slam-tutorial-gx-master/partVII/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/slam.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/slam"
+	cd /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/slam.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/CMakeFiles/slam.dir/build: ../bin/slam
@@ -207,10 +213,10 @@ src/CMakeFiles/slam.dir/requires: src/CMakeFiles/slam.dir/slam.cpp.o.requires
 .PHONY : src/CMakeFiles/slam.dir/requires
 
 src/CMakeFiles/slam.dir/clean:
-	cd /home/hxb/rgbd-slam-tutorial-gx-master/partVII/build/src && $(CMAKE_COMMAND) -P CMakeFiles/slam.dir/cmake_clean.cmake
+	cd /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/build/src && $(CMAKE_COMMAND) -P CMakeFiles/slam.dir/cmake_clean.cmake
 .PHONY : src/CMakeFiles/slam.dir/clean
 
 src/CMakeFiles/slam.dir/depend:
-	cd /home/hxb/rgbd-slam-tutorial-gx-master/partVII/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hxb/rgbd-slam-tutorial-gx-master/partVII /home/hxb/rgbd-slam-tutorial-gx-master/partVII/src /home/hxb/rgbd-slam-tutorial-gx-master/partVII/build /home/hxb/rgbd-slam-tutorial-gx-master/partVII/build/src /home/hxb/rgbd-slam-tutorial-gx-master/partVII/build/src/CMakeFiles/slam.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/src /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/build /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/build/src /home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/build/src/CMakeFiles/slam.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/CMakeFiles/slam.dir/depend
 
