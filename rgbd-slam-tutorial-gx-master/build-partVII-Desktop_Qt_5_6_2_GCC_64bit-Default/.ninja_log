@@ -1,0 +1,12 @@
+# ninja log v5
+0	336	0	src/CMakeFiles/main.dir/main.cpp.o	7a05f8eff68f999a
+337	419	0	/home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/bin/main	8d57159708fb4858
+1	7593	0	src/CMakeFiles/generate_pointcloud.dir/generatePointCloud.cpp.o	52844463a62b6bf2
+7594	8261	0	/home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/bin/generate_pointcloud	d2957ff11d933d8a
+1	13762	0	src/CMakeFiles/slambase.dir/slamBase.cpp.o	e1c2ee4bc92f0cdf
+13762	13908	0	/home/hxb/github/code/rgbd-slam-tutorial-gx-master/partVII/lib/libslambase.a	e40d9afa31fe2ec4
+13909	48127	0	src/CMakeFiles/detectFeatures.dir/detectFeatures.cpp.o	5998386205aa1812
+13908	48269	0	src/CMakeFiles/visualOdometry.dir/visualOdometry.cpp.o	fb185e66e743035e
+13908	50934	0	src/CMakeFiles/joinPointCloud.dir/joinPointCloud.cpp.o	3d5d36e052420d71
+13909	72585	0	src/CMakeFiles/slamEnd.dir/slamEnd.cpp.o	cf6095b6eee1f425
+13908	75533	0	src/CMakeFiles/slam.dir/slam.cpp.o	ccd9b0876d2967ba

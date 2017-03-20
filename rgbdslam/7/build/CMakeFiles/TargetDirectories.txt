@@ -1,6 +1,6 @@
-/home/hxb/rgbdslam/7/build/CMakeFiles/edit_cache.dir
-/home/hxb/rgbdslam/7/build/CMakeFiles/rebuild_cache.dir
-/home/hxb/rgbdslam/7/build/src/CMakeFiles/edit_cache.dir
-/home/hxb/rgbdslam/7/build/src/CMakeFiles/rebuild_cache.dir
-/home/hxb/rgbdslam/7/build/src/CMakeFiles/slam.dir
-/home/hxb/rgbdslam/7/build/src/CMakeFiles/slambase.dir
+/home/hxb/github/code/rgbdslam/7/build/CMakeFiles/edit_cache.dir
+/home/hxb/github/code/rgbdslam/7/build/CMakeFiles/rebuild_cache.dir
+/home/hxb/github/code/rgbdslam/7/build/src/CMakeFiles/edit_cache.dir
+/home/hxb/github/code/rgbdslam/7/build/src/CMakeFiles/rebuild_cache.dir
+/home/hxb/github/code/rgbdslam/7/build/src/CMakeFiles/slam.dir
+/home/hxb/github/code/rgbdslam/7/build/src/CMakeFiles/slambase.dir

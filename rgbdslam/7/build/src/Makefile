@@ -48,10 +48,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hxb/rgbdslam/7
+CMAKE_SOURCE_DIR = /home/hxb/github/code/rgbdslam/7
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hxb/rgbdslam/7/build
+CMAKE_BINARY_DIR = /home/hxb/github/code/rgbdslam/7/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,14 +80,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/hxb/rgbdslam/7/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/hxb/rgbdslam/7/build/CMakeFiles /home/hxb/rgbdslam/7/build/src/CMakeFiles/progress.marks
-	cd /home/hxb/rgbdslam/7/build && $(MAKE) -f CMakeFiles/Makefile2 src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hxb/rgbdslam/7/build/CMakeFiles 0
+	cd /home/hxb/github/code/rgbdslam/7/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/hxb/github/code/rgbdslam/7/build/CMakeFiles /home/hxb/github/code/rgbdslam/7/build/src/CMakeFiles/progress.marks
+	cd /home/hxb/github/code/rgbdslam/7/build && $(MAKE) -f CMakeFiles/Makefile2 src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hxb/github/code/rgbdslam/7/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/hxb/rgbdslam/7/build && $(MAKE) -f CMakeFiles/Makefile2 src/clean
+	cd /home/hxb/github/code/rgbdslam/7/build && $(MAKE) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/hxb/rgbdslam/7/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/hxb/github/code/rgbdslam/7/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/hxb/rgbdslam/7/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/hxb/github/code/rgbdslam/7/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/hxb/rgbdslam/7/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/hxb/github/code/rgbdslam/7/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/CMakeFiles/slam.dir/rule:
-	cd /home/hxb/rgbdslam/7/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/slam.dir/rule
+	cd /home/hxb/github/code/rgbdslam/7/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/slam.dir/rule
 .PHONY : src/CMakeFiles/slam.dir/rule
 
 # Convenience name for target.
@@ -122,12 +122,12 @@ slam: src/CMakeFiles/slam.dir/rule
 
 # fast build rule for target.
 slam/fast:
-	cd /home/hxb/rgbdslam/7/build && $(MAKE) -f src/CMakeFiles/slam.dir/build.make src/CMakeFiles/slam.dir/build
+	cd /home/hxb/github/code/rgbdslam/7/build && $(MAKE) -f src/CMakeFiles/slam.dir/build.make src/CMakeFiles/slam.dir/build
 .PHONY : slam/fast
 
 # Convenience name for target.
 src/CMakeFiles/slambase.dir/rule:
-	cd /home/hxb/rgbdslam/7/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/slambase.dir/rule
+	cd /home/hxb/github/code/rgbdslam/7/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/slambase.dir/rule
 .PHONY : src/CMakeFiles/slambase.dir/rule
 
 # Convenience name for target.
@@ -137,7 +137,7 @@ slambase: src/CMakeFiles/slambase.dir/rule
 
 # fast build rule for target.
 slambase/fast:
-	cd /home/hxb/rgbdslam/7/build && $(MAKE) -f src/CMakeFiles/slambase.dir/build.make src/CMakeFiles/slambase.dir/build
+	cd /home/hxb/github/code/rgbdslam/7/build && $(MAKE) -f src/CMakeFiles/slambase.dir/build.make src/CMakeFiles/slambase.dir/build
 .PHONY : slambase/fast
 
 slam.o: slam.cpp.o
@@ -146,7 +146,7 @@ slam.o: slam.cpp.o
 
 # target to build an object file
 slam.cpp.o:
-	cd /home/hxb/rgbdslam/7/build && $(MAKE) -f src/CMakeFiles/slam.dir/build.make src/CMakeFiles/slam.dir/slam.cpp.o
+	cd /home/hxb/github/code/rgbdslam/7/build && $(MAKE) -f src/CMakeFiles/slam.dir/build.make src/CMakeFiles/slam.dir/slam.cpp.o
 .PHONY : slam.cpp.o
 
 slam.i: slam.cpp.i
@@ -155,7 +155,7 @@ slam.i: slam.cpp.i
 
 # target to preprocess a source file
 slam.cpp.i:
-	cd /home/hxb/rgbdslam/7/build && $(MAKE) -f src/CMakeFiles/slam.dir/build.make src/CMakeFiles/slam.dir/slam.cpp.i
+	cd /home/hxb/github/code/rgbdslam/7/build && $(MAKE) -f src/CMakeFiles/slam.dir/build.make src/CMakeFiles/slam.dir/slam.cpp.i
 .PHONY : slam.cpp.i
 
 slam.s: slam.cpp.s
@@ -164,7 +164,7 @@ slam.s: slam.cpp.s
 
 # target to generate assembly for a file
 slam.cpp.s:
-	cd /home/hxb/rgbdslam/7/build && $(MAKE) -f src/CMakeFiles/slam.dir/build.make src/CMakeFiles/slam.dir/slam.cpp.s
+	cd /home/hxb/github/code/rgbdslam/7/build && $(MAKE) -f src/CMakeFiles/slam.dir/build.make src/CMakeFiles/slam.dir/slam.cpp.s
 .PHONY : slam.cpp.s
 
 slamBase.o: slamBase.cpp.o
@@ -173,7 +173,7 @@ slamBase.o: slamBase.cpp.o
 
 # target to build an object file
 slamBase.cpp.o:
-	cd /home/hxb/rgbdslam/7/build && $(MAKE) -f src/CMakeFiles/slambase.dir/build.make src/CMakeFiles/slambase.dir/slamBase.cpp.o
+	cd /home/hxb/github/code/rgbdslam/7/build && $(MAKE) -f src/CMakeFiles/slambase.dir/build.make src/CMakeFiles/slambase.dir/slamBase.cpp.o
 .PHONY : slamBase.cpp.o
 
 slamBase.i: slamBase.cpp.i
@@ -182,7 +182,7 @@ slamBase.i: slamBase.cpp.i
 
 # target to preprocess a source file
 slamBase.cpp.i:
-	cd /home/hxb/rgbdslam/7/build && $(MAKE) -f src/CMakeFiles/slambase.dir/build.make src/CMakeFiles/slambase.dir/slamBase.cpp.i
+	cd /home/hxb/github/code/rgbdslam/7/build && $(MAKE) -f src/CMakeFiles/slambase.dir/build.make src/CMakeFiles/slambase.dir/slamBase.cpp.i
 .PHONY : slamBase.cpp.i
 
 slamBase.s: slamBase.cpp.s
@@ -191,7 +191,7 @@ slamBase.s: slamBase.cpp.s
 
 # target to generate assembly for a file
 slamBase.cpp.s:
-	cd /home/hxb/rgbdslam/7/build && $(MAKE) -f src/CMakeFiles/slambase.dir/build.make src/CMakeFiles/slambase.dir/slamBase.cpp.s
+	cd /home/hxb/github/code/rgbdslam/7/build && $(MAKE) -f src/CMakeFiles/slambase.dir/build.make src/CMakeFiles/slambase.dir/slamBase.cpp.s
 .PHONY : slamBase.cpp.s
 
 # Help Target
@@ -221,6 +221,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/hxb/rgbdslam/7/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/hxb/github/code/rgbdslam/7/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
